@@ -24,10 +24,20 @@ fn get_int() -> i32 {
 }
 
 fn main() {
-    let name: &str = "Alex";
-    println!("{}", char_dis(name, 2));
-}
-
-fn char_dis(x: &str, y: usize) -> char {
-    x.chars().nth(y).unwrap_or('_')
+    println!("Print Number");
+    let mut num1: i32 = get_int();
+    println!("Print Another Number");
+    let mut num2: i32 = get_int();
+    println!("1. a + b");
+    println!("2. a - b");
+    println!("3. a * b");
+    println!("4. a + b");
+    let answer = get_int();
+    match answer {
+        1 => println!("{} + {} = {}", num1, num2, num1 + num2),
+        2 => println!("{} - {} = {}", num1, num2, num1 - num2),
+        3 => println!("{} * {} = {}", num1, num2, num1 * num2),
+        4 => println!("{} / {} = {}", num1, num2, num1 / num2),
+        _ => println!("Error"),
+    }
 }
